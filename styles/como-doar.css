@@ -1,0 +1,517 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter&display=swap');
+
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    height: 100vh;
+}
+
+/* header */
+header{
+    height: auto;
+    display: flex;
+    justify-content: space-between;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 10;
+    background-color: #fff;
+   }
+   
+   header nav{
+       display: flex;
+       align-items: center;
+   }
+   
+   header nav .container-logo{
+       position: relative;
+       top: 0;
+       width: 20%;
+   }
+   
+   header nav .container-logo img{
+       width: 100%;
+   }
+   
+   header nav ul{
+       display: flex;
+       align-items: center;
+   }
+   
+   header nav ul li{
+       list-style: none;
+       padding-left: 1vw;
+    
+   }
+   header nav ul li:nth-child(3){
+    opacity: .5;
+   }
+   header nav ul li a{
+       font-family: 'Inter', sans-serif;
+       font-size: 1.2vw;
+       font-weight: 600;
+       color: #000;
+       text-decoration: none;
+   }
+   header nav ul li a::after{
+       content: "";
+       display: block;
+       background-color: rgb(203, 0, 0);
+       border-radius: 1vw;
+       height: .3vw;
+       width: 0%;
+       transition: .4s;
+   }
+   header nav ul li a:hover::after{
+       width: 100%;
+   }
+   .hamburguer{
+       display: none;
+       cursor: pointer;
+   }
+   .bar{
+       display: block;
+       width: 1.8rem;
+       height: 3px;
+       margin: 5px auto;
+       transition: .3s ease-in-out;
+       background-color: #000;
+       border-radius: 5px;
+   }
+   
+/* header END*/
+
+/* main */
+
+main{
+    display: flex;
+    width: 50%;
+    padding: 2vw 2.8vw;
+    margin-top: 17vh;
+}
+main .container-main{
+    position: absolute;
+    width: 60%;
+    right: 1.5rem;
+}
+
+main .container-main .container-duvidas-frequentes{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+main .container-main .container-duvidas-frequentes .content-duvidas-frequentes{
+    display: inline-block;
+    padding: 2px 8px;
+    border-radius: 15px;
+    font-family: 'Inter', sans-serif;
+    font-weight: 300;
+    font-size: 1vw;
+}
+
+main .container-acordions{
+    height: auto;
+    margin-top: 1.2rem;
+    width: 70%;
+    border: 1px solid red;
+    transition: .3s;
+    position: relative;
+    overflow: hidden;
+    cursor: pointer;
+    display: flex;
+}
+main .container-acordions a{
+    text-decoration: none;
+
+}
+main .container-acordions::before{
+    content: '';
+    position: absolute;
+    height: 100%;
+    width: 1vw;
+    background-color: #c71212;
+    transition: .6s;
+    
+}
+main .container-acordions:hover::before{
+    width: 100%;
+    z-index: -1;
+}
+
+main .container-acordions .content-acordions .pergunta{
+    display: flex;
+   justify-content: center;
+   align-items: center;
+    width: auto;
+  
+}
+main .container-acordions .content-acordions .pergunta h3{
+    color: black;
+    font-family: 'Inter', sans-serif;
+    font-weight: 600;
+    font-size: 1vw;
+    text-transform: uppercase;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 1.5vw;
+    transition: .7s;
+   
+}
+main .container-acordions  .content-acordions:hover h3{
+    color: #fff;
+}
+
+
+main .content-main .container-title h1{
+    font-family: 'Inter', sans-serif;
+    font-weight: 900;
+    text-transform: uppercase;
+    text-align: center;
+    
+    font-size: 4.9vw;
+    color: rgb(203, 0, 0);
+}
+
+ 
+/* 
+main .content-main .icons{
+    display: flex;
+    margin-top: 1rem;
+    padding-bottom: 2rem;
+} */
+main .content-main .icons li{
+    list-style: none;
+}
+main .content-main .icons li span{
+    font-family: 'Inter', sans-serif;
+    text-decoration: none;
+}
+main .content-main .icons li i{
+    font-size: 1.5rem;
+    font-weight: 900;
+    padding-left: .5rem;
+    transition: .5s;
+    color: #000;
+}
+main .content-main .icons li i:hover{
+    transform: rotate(-15deg);
+    cursor: pointer;
+}
+
+
+main .img-main{
+    position: fixed;
+    bottom: 0;
+    left: 1rem;
+    width: 70%;
+    z-index: -1;
+}
+main .img-main img{
+    width: 100%;
+    filter: drop-shadow(0px -0.5px 2px  #fff);
+}
+main .container-buttons{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 1.5rem;
+    gap: 10px;
+    flex-wrap: wrap;
+}
+main .container-buttons .prosseguir, .voltar{
+   border-radius: 4px;
+   padding: 1vw;
+   font-family: 'Inter', sans-serif;
+   width: auto;
+   height: auto;
+   cursor: pointer;
+   transition: .3s;
+   outline: 1.8px solid rgb(174, 10, 10);
+   outline-offset: 1px;
+   background-color: rgb(225, 57, 57);
+}
+main .container-buttons .prosseguir:hover, .voltar:hover{
+    letter-spacing: 2px;
+}
+main .container-buttons .prosseguir a, .voltar a{
+    text-decoration: none;
+    text-transform: uppercase;
+    color: #000;
+    font-weight: bold;
+    color: #fff;
+    font-size: 1vw;
+    
+}
+.img-response{
+    display: none;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    left: 0;
+    filter: drop-shadow(0px -0.5px 2px  #fff);
+}
+/* main END */
+
+
+/* CODIGO CSS DARK MODE */
+
+
+.global-dark-mod{
+    padding-left: 2vw;
+}
+body.dark {
+    background: #292c35;
+    color: #FFF;
+  }
+  body.dark header{
+    background-color: #292c35;
+}
+  body.dark header nav ul li a{
+    color: #fff;
+  }
+  body.dark  main .content-main .icons li i{
+    color: #fff;
+  }
+  body.dark main .content-main .container-title h1{
+    color: #c71212	;
+  }
+  body.dark main .content-main .icons li a{
+    color: #f14b4b	; 
+  }
+  body.dark header nav ul li a{
+    font-weight: 400;
+  }
+  body.dark main .content-main .icons li a{
+    color: white	; 
+  }
+
+  .checkbox {
+    opacity: 0;
+    position: absolute;
+  }
+  
+  .label {
+    background-color: #111;
+    border-radius: 1vw;
+    cursor: pointer;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  
+    padding: .4vw;
+    position: relative;
+    height: 1.4vw;
+    width: 2.8vw;
+    transform: scale(1.5);
+  
+  }
+  
+  
+  .label .ball {
+    background-color: #fff;
+    border-radius: 2vw;
+    position: absolute;
+    top: .2.5vh;
+    left: .2vw;
+    height: 1.1vw;
+    width: 1.1vw;
+    transform: translateX(0px);
+    transition: transform 0.2s linear;
+  }
+  
+  .checkbox:checked + .label .ball {
+    transform: translateX(1.3vw);
+  }
+  
+  .fa-moon {
+    color:rgb(79, 60, 185);
+    font-size:.8vw;
+  }
+  
+  .fa-sun {
+    color: rgb(240, 205, 11);
+    font-size:.8vw;
+  }
+  /* DARK MODE END */
+
+
+
+
+/* responsividade */
+
+@media (max-width:875px) {
+  
+    .global-dark-mod{
+        position: absolute;
+        bottom: 1rem;
+        right: 1rem;
+    }
+    .label {
+        border-radius: 50px;
+      
+        padding: 5px;
+        height: 18px;
+        width: 33px;
+        transform: scale(1.5);
+      
+      }
+      .label .ball {
+        border-radius: 50%;
+        top: 2.4px;
+        left: 2px;
+        height: 13px;
+        width: 13px;
+      }
+      
+      .checkbox:checked + .label .ball {
+        transform: translateX(15px);
+      }
+      
+      .fa-moon {
+        font-size:10px;
+      }
+      
+      .fa-sun {
+        font-size:10px;
+      }
+    body.dark .nav-menu{
+        background-color: #000;
+    }
+    body.dark .bar{
+        background-color: #fff;
+    }
+    body.dark main .container-acordions .content-acordions .pergunta h3{
+        color: #fff;
+    }
+    header nav ul li a{
+        font-size: .9rem;
+    }
+    header .container-hamburguer{
+        padding-right: 1rem;
+        position: relative;
+       z-index: 2;
+    }
+    header{
+        position: fixed;
+        top: 0;
+        width: 100%;
+        background-color: #fff;
+    }
+ 
+    header nav .container-logo{
+        width: 12rem;
+    }
+    .hamburguer{
+        display: block;
+        z-index: 2;
+        position: relative;
+    }
+    .hamburguer.active .bar:nth-child(2){
+        opacity: 0;
+    }
+    .hamburguer.active .bar:nth-child(1){
+       transform: translateY(8px) rotate(45deg);
+       border-radius: 5px;
+    }
+    .hamburguer.active .bar:nth-child(3){
+        transform: translateY(-8px) rotate(-45deg);
+        border-radius: 5px;
+     }
+
+     header nav ul li a{
+        font-weight: 900;
+        color: #fff;
+     }
+     header nav ul li{
+        margin-bottom: 3rem;
+     }
+     header nav{
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+    }
+    .nav-menu{
+        position: fixed;
+        top: 0;
+        right: 0;
+        background: linear-gradient(60deg, rgb(177, 0, 0), rgb(114, 0, 0), rgb(255, 0, 0));
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        height: 100%;
+        width: 0%;
+        z-index: 1;
+        transition: .6s;
+        overflow: hidden;
+    }
+    .nav-menu.active{
+        width: 15rem;
+        box-shadow: 1px 5px 15px 1px #000000;
+        background-color: rgb(210, 208, 208);
+    }
+    main .img-main{
+        display: none;
+    }
+    main{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        padding-top: 2rem;
+    }
+    main .container-acordions::before{
+        width: .7rem;        
+    }
+    main .container-acordions .content-acordions .pergunta h3{
+        font-size: .8rem;
+        padding: 1.1rem;
+       
+    }
+    main .container-main .container-duvidas-frequentes .content-duvidas-frequentes{
+        font-size: .6rem;
+    }
+    main .container-main{
+        position: static;
+        width: 100%;
+    }
+    main .content-main .container-title h1{
+        font-size: 8vw;
+        text-align: center;
+    }
+    main .content-main .container-texto p{
+        text-align: justify;
+        font-size: 1.1rem;
+    }
+    main .container-buttons .prosseguir, .voltar{
+        padding: .8rem;
+     }
+     main .container-buttons .prosseguir a, .voltar a{
+         font-size: .8rem;
+         
+     }
+     main .content-main .icons li{
+        font-size: .8rem;
+    }
+    main .content-main .icons li i{
+        font-size: 1rem;
+    }
+    .img-response{
+        display: block;
+        z-index: -1;
+        opacity: .2;
+    }
+}
+
+
+
+
+
